@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CreativeSpace | Smart Studio Booking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="views/style/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-nav">
+        <div class="brand-wrap">
+          <div class="brand-mark">CS</div>
+          <div>
+            <p class="eyebrow">Creative Hub</p>
+            <h1>CreativeSpace</h1>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="views/component/dashboard.html">Dashboard</a>
+          <a href="views/component/catalog.html">Catalog</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span class="toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+      <main>
+        <section class="hero">
+          <div class="hero-content">
+            <p class="eyebrow">Smart studio reservation</p>
+            <h2>Book your perfect creative space in minutes.</h2>
+            <p class="hero-text">Reserve podcast booths, photography sets, recording rooms, and editing suites designed for students, creators, and creative teams.</p>
+            <div class="hero-actions">
+              <a class="btn-primary" href="views/component/catalog.html">Explore Studios</a>
+              <a class="btn-secondary" href="views/component/dashboard.html">View Dashboard</a>
+            </div>
+            <div class="metric-strip">
+              <div><strong>24/7</strong><span>Flexible access</span></div>
+              <div><strong>98%</strong><span>Satisfaction rate</span></div>
+              <div><strong>4</strong><span>Studio types</span></div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-card hero-card-main">
+              <span>Today's best pick</span>
+              <h3>Video Recording Room</h3>
+              <p>Available for 2 hours · 10 participants</p>
+            </div>
+            <div class="hero-card hero-card-side">
+              <span>Booked today</span>
+              <strong id="heroBookedCount">0</strong>
+            </div>
+          </div>
+        </section>
+        <section class="preview-section">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Explore</p>
+              <h2>Studio preview</h2>
+            </div>
+            <a href="views/component/catalog.html" class="view-link">See all studios</a>
+          </div>
+          <div class="preview-grid" id="previewCatalog"></div>
+        </section>
+        <section class="feature-section">
+          <div class="section-header center-text">
+            <div>
+              <p class="eyebrow">Why CreativeSpace</p>
+              <h2>Everything you need to create</h2>
+            </div>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card"><h3>Fast booking</h3><p>Reserve studio time in a few clicks with instant confirmation.</p></article>
+            <article class="feature-card"><h3>Smart planning</h3><p>Track occupancy, popular studios, and booking activity in real time.</p></article>
+            <article class="feature-card"><h3>Built for creators</h3><p>Designed for students, content creators, and creative professionals.</p></article>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div>
+          <h3>CreativeSpace</h3>
+          <p>Reserve creative spaces with confidence.</p>
+        </div>
+        <div class="footer-links">
+          <a href="views/component/dashboard.html">Dashboard</a>
+          <a href="views/component/catalog.html">Catalog</a>
+        </div>
+      </footer>
+    </div>
+    <script src="views/script/script.js"></script>
+  </body>
+</html>

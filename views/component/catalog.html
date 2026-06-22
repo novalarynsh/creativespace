@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CreativeSpace | Studio Catalog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <body data-page="catalog">
+    <div class="app-shell">
+      <header class="top-nav">
+        <div class="brand-wrap">
+          <div class="brand-mark">CS</div>
+          <div>
+            <p class="eyebrow">Creative Hub</p>
+            <h1>CreativeSpace</h1>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="../../index.html">Home</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="catalog.html" class="active">Catalog</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span class="toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+      <main>
+        <section class="catalog-section" id="catalog">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Collections</p>
+              <h2>Studio Catalog</h2>
+            </div>
+          </div>
+          <div class="catalog-controls">
+            <input type="search" id="searchInput" placeholder="Search studios or facilities..." />
+            <select id="statusFilter">
+              <option value="all">All Status</option>
+              <option value="available">Available</option>
+              <option value="booked">Booked</option>
+            </select>
+          </div>
+          <div class="studio-grid" id="studioGrid"></div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div>
+          <h3>CreativeSpace</h3>
+          <p>Reserve creative spaces with confidence.</p>
+        </div>
+        <div class="footer-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="catalog.html">Catalog</a>
+        </div>
+      </footer>
+    </div>
+    <div class="modal" id="studioModal">
+      <div class="modal-content">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+    <div class="modal booking-modal" id="bookingModal">
+      <div class="booking-modal-content">
+        <button class="modal-close" id="closeBookingModal">&times;</button>
+        <div class="booking-modal-body">
+          <div class="booking-modal-summary">
+            <p class="eyebrow">Selected Studio</p>
+            <h3 id="summaryTitle">Choose a space</h3>
+            <p id="summaryDetails">No studio selected yet.</p>
+            <ul id="summaryFacilities"></ul>
+          </div>
+          <form class="booking-form" id="bookingForm" novalidate>
+            <div class="form-group">
+              <label for="userName">Full Name</label>
+              <input id="userName" name="userName" type="text" required />
+            </div>
+            <div class="form-row two-cols">
+              <div class="form-group">
+                <label for="studioSelect">Studio</label>
+                <select id="studioSelect" name="studioSelect" required>
+                  <option value="">Choose a studio</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="bookingDate">Booking Date</label>
+                <input id="bookingDate" name="bookingDate" type="date" required />
+              </div>
+            </div>
+            <div class="form-row two-cols">
+              <div class="form-group">
+                <label for="startTime">Start Time</label>
+                <input id="startTime" name="startTime" type="time" required />
+              </div>
+              <div class="form-group">
+                <label for="duration">Duration (hours)</label>
+                <input id="duration" name="duration" type="number" min="1" max="12" required />
+              </div>
+            </div>
+            <div class="form-row two-cols">
+              <div class="form-group">
+                <label for="participantCount">Participants</label>
+                <input id="participantCount" name="participantCount" type="number" min="1" required />
+              </div>
+              <div class="form-group capacity-note">
+                <label>Capacity Note</label>
+                <p id="capacityMessage">Please select a studio</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="notes">Additional Notes</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Describe your setup or special requests..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Confirm Booking</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="../script/script.js"></script>
+  </body>
+</html>

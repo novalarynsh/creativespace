@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CreativeSpace | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <body data-page="dashboard">
+    <div class="app-shell">
+      <header class="top-nav">
+        <div class="brand-wrap">
+          <div class="brand-mark">CS</div>
+          <div>
+            <p class="eyebrow">Creative Hub</p>
+            <h1>CreativeSpace</h1>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="../../index.html">Home</a>
+          <a href="dashboard.html" class="active">Dashboard</a>
+          <a href="catalog.html">Catalog</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span class="toggle-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+      <main>
+        <section class="dashboard-section" id="dashboard">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Overview</p>
+              <h2>Dashboard</h2>
+            </div>
+            <span class="date-pill" id="todayLabel">Loading date...</span>
+          </div>
+          <div class="stats-grid">
+            <article class="stat-card accent-card">
+              <p>Available Today</p>
+              <h3 id="availableToday">0</h3>
+              <span>Studios ready</span>
+            </article>
+            <article class="stat-card">
+              <p>Occupancy Rate</p>
+              <h3 id="occupancyRate">0%</h3>
+              <span>Bookings in use</span>
+            </article>
+            <article class="stat-card">
+              <p>Most Used</p>
+              <h3 id="topStudio">—</h3>
+              <span>Popular studio</span>
+            </article>
+            <article class="stat-card">
+              <p>Total Bookings</p>
+              <h3 id="totalBookings">0</h3>
+              <span>This month</span>
+            </article>
+          </div>
+          <div class="dashboard-grid">
+            <article class="panel occupancy-panel">
+              <div class="panel-header">
+                <div>
+                  <p class="eyebrow">Usage</p>
+                  <h3>Studio Occupancy</h3>
+                </div>
+                <span id="occupancyBadge">0% occupied</span>
+              </div>
+              <div class="occupancy-ring-wrap">
+                <div class="progress-ring">
+                  <div class="progress-ring-inner">
+                    <strong id="occupancyCircle">0%</strong>
+                    <span>filled</span>
+                  </div>
+                </div>
+              </div>
+              <div class="usage-bars" id="usageBars"></div>
+            </article>
+            <article class="panel activity-panel">
+              <div class="panel-header">
+                <div>
+                  <p class="eyebrow">Recent</p>
+                  <h3>Latest Bookings</h3>
+                </div>
+              </div>
+              <div class="activity-list" id="activityList"></div>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div>
+          <h3>CreativeSpace</h3>
+          <p>Reserve creative spaces with confidence.</p>
+        </div>
+        <div class="footer-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="catalog.html">Catalog</a>
+        </div>
+      </footer>
+    </div>
+    <script src="../script/script.js"></script>
+  </body>
+</html>
